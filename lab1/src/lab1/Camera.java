@@ -1,13 +1,14 @@
 package lab1;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class Camera extends Tech{
-    public void init(Scanner scanner){
+    public void init(Scanner sc){
         System.out.println("Введите наименование");
-        setName(scanner.next());
+        setName(Inputters.getString(sc));
         System.out.println("Введите стоимость");
-        setCost(scanner.nextInt());
+        setCost(Inputters.getInteger(sc));
     }
 
     public String toString(){

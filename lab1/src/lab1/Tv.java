@@ -3,14 +3,14 @@ package lab1;
 import java.util.Scanner;
 
 class Tv extends Tech{
-    public void init(Scanner scanner){
+    public void init(Scanner sc){
         System.out.println("Введите наименование");
-        setName(scanner.next());
+        setName(Inputters.getString(sc));
         System.out.println("Введите стоимость");
-        setCost(scanner.nextInt());
+        setCost(Inputters.getInteger(sc));
     }
 
     public String toString(){
-        return "Телевизор" + getName() + "\nСтоимость: " + getCost();
+        return "Телевизор " + getName() + getName() + "\nСтоимость: " + getCost();
     }
 }
