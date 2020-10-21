@@ -1,6 +1,8 @@
-package lab1;
+package lab1.products;
 
-abstract class MilkProduct extends Product{
+import lab1.products.Product;
+
+public abstract class MilkProduct extends Product {
     private Integer weight;
 
     public Integer getWeight() {

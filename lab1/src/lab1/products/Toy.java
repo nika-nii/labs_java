@@ -1,6 +1,6 @@
-package lab1;
+package lab1.products;
 
-abstract class Toy extends Product{
+public abstract class Toy extends Product {
     public boolean canBuy(int money){
         if (money > getCost()){
             return true;

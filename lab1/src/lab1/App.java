@@ -1,5 +1,7 @@
 package lab1;
 
+import lab1.products.Product;
+
 import java.util.*;
 
 public class App {

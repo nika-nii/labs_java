@@ -1,9 +1,10 @@
-package lab1;
+package lab1.products;
 
-import java.util.InputMismatchException;
+import lab1.Inputters;
+
 import java.util.Scanner;
 
-class RubiksCube extends Toy{
+public class Tv extends Tech{
     public void init(Scanner sc){
         System.out.println("Введите наименование");
         setName(Inputters.getString(sc));
@@ -12,6 +13,6 @@ class RubiksCube extends Toy{
     }
 
     public String toString(){
-        return "Кубик Рубика " + this.getName() + "\nСтоимость: " + getCost();
+        return "Телевизор " + getName() + getName() + "\nСтоимость: " + getCost();
     }
 }

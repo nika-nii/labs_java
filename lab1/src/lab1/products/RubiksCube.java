@@ -1,8 +1,10 @@
-package lab1;
+package lab1.products;
+
+import lab1.Inputters;
 
 import java.util.Scanner;
 
-class Tv extends Tech{
+public class RubiksCube extends Toy{
     public void init(Scanner sc){
         System.out.println("Введите наименование");
         setName(Inputters.getString(sc));
@@ -11,6 +13,6 @@ class Tv extends Tech{
     }
 
     public String toString(){
-        return "Телевизор " + getName() + getName() + "\nСтоимость: " + getCost();
+        return "Кубик Рубика " + this.getName() + "\nСтоимость: " + getCost();
     }
 }

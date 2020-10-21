@@ -1,7 +1,7 @@
-package lab1;
+package lab1.products;
 import java.util.Scanner;
 
-abstract class Product implements Comparable<Product>{
+public abstract class Product implements Comparable<Product>{
     private String name;
     private Integer cost;
     public void setName(String newName){ this.name = newName; }

@@ -1,12 +1,12 @@
 package lab1;
 
+import lab1.products.*;
+
 import java.util.ArrayList;
 
 import java.util.Scanner;
 
 public class ProductUtilities {
-    //static private String inputTypes = String.format("%s, %s, %s, %s",
-    //        RubiksCube.getInfo(), Cheese.getInfo(), Camera.getInfo(), Tv.getInfo());
 
     static public void printCheapest(ArrayList<Product> products){
         if (products.size() == 0){
