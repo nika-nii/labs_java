@@ -4,6 +4,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class RubiksCube extends Toy{
+    public static String getOutputName(){
+        return "Кубик Рубика";
+    };
+
     public void init(Scanner sc){
         System.out.println("Введите наименование");
         setName(Inputters.getString(sc));

@@ -3,6 +3,9 @@ package lab1;
 import java.util.Scanner;
 
 class Tv extends Tech{
+    public static String getOutputName(){
+        return "Телевизор";
+    };
     public void init(Scanner sc){
         System.out.println("Введите наименование");
         setName(Inputters.getString(sc));

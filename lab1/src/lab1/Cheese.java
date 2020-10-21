@@ -3,6 +3,9 @@ package lab1;
 import java.util.Scanner;
 
 class Cheese extends MilkProduct{
+    public static String getOutputName(){
+        return "Сыр";
+    };
     public void init(Scanner sc){
         System.out.println("Введите наименование");
         setName(Inputters.getString(sc));

@@ -1,6 +1,7 @@
 package lab1;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args){

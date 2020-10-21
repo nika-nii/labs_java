@@ -10,7 +10,7 @@ abstract class Product implements Comparable<Product>{
     public Integer getCost(){ return cost; }
 
     public static String getOutputName(){
-        return "НИ-ЧЕ-ГО";
+        return "Продукт";
     };
 
     public abstract void init(Scanner scanner); // считывание параметров с консоли

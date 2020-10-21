@@ -1,14 +1,30 @@
 package lab1;
 
 import java.util.ArrayList;
-
 import java.util.Scanner;
 
 public class ProductUtilities {
-    //static private String inputTypes = String.format("%s, %s, %s, %s",
-    //        RubiksCube.getInfo(), Cheese.getInfo(), Camera.getInfo(), Tv.getInfo());
+    private static ArrayList<Class> classTypes = new ArrayList<Class>(){
+        {
+            System.out.println("!!!!!!");
+            classTypes.add(1, RubiksCube.class);
+            classTypes.add(2, Cheese.class);
+            classTypes.add(3, Camera.class);
+            classTypes.add(4, Tv.class);
+            System.out.println("!!!!!!");
+        }
+    };
+    private static String outputNames = String.format(new String("%i: %s, %i: %s, %i: %s, %i: %s"),
+            1, RubiksCube.getOutputName(),
+            2, Cheese.getOutputName(),
+            3, Camera.getOutputName(),
+            4, Tv.getOutputName());
 
-    static public void printCheapest(ArrayList<Product> products){
+    public static init(){
+
+    }
+    
+    public static void printCheapest(ArrayList<Product> products){
         if (products.size() == 0){
             System.out.println("У вас массив пустой, так нельзя!");
             return;
@@ -24,13 +40,14 @@ public class ProductUtilities {
 
 
 
-    static public Product getProduct(Scanner sc){
-        String inputTypes = RubiksCube.getOutputName();
-        System.out.println(String.format("Введите тип товара (%s)", inputTypes));
+    public static Product getProduct(Scanner sc){
+        //System.out.println(String.format( "Введите тип товара: %s", outputNames));
+
+
 
         Product product = null;
         boolean isCorrectlyInputted = false;
-        while (isCorrectlyInputted == false){
+        while (!isCorrectlyInputted){
             Integer t = Inputters.getInteger(sc);
             switch (t) {
                 case 1:
