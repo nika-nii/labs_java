@@ -1,4 +1,4 @@
-package lab1.products;
+package ru.bstu.iitus.vt41.kid.products;
 import java.util.Scanner;
 
 public abstract class Product implements Comparable<Product>{

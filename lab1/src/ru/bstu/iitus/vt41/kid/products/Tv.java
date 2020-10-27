@@ -1,6 +1,6 @@
-package lab1.products;
+package ru.bstu.iitus.vt41.kid.products;
 
-import lab1.Inputters;
+import ru.bstu.iitus.vt41.kid.utils.Inputters;
 
 import java.util.Scanner;
 

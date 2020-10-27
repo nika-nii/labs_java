@@ -1,6 +1,5 @@
-package lab1.products;
+package ru.bstu.iitus.vt41.kid.products;
 
-import lab1.products.Product;
 
 public abstract class MilkProduct extends Product {
     private Integer weight;
