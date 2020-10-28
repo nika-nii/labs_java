@@ -7,12 +7,12 @@ public class Inputters {
     public static String getString(Scanner sc) {
         String result = "";
         boolean isCorrectlyInputted = false;
-        while (!isCorrectlyInputted){
-            try{
+        while (!isCorrectlyInputted) {
+            try {
                 sc.nextLine();
                 result = sc.nextLine();
                 isCorrectlyInputted = true;
-            } catch (InputMismatchException ex){
+            } catch (InputMismatchException ex) {
                 System.out.println("Вы как-то не так вводите, прекратите и введите нормально!");
                 sc.nextLine();
             }
@@ -20,14 +20,14 @@ public class Inputters {
         return result;
     }
 
-    public static Integer getInteger(Scanner sc){
+    public static Integer getInteger(Scanner sc) {
         Integer result = 0;
         boolean isCorrectlyInputted = false;
-        while (!isCorrectlyInputted){
-            try{
+        while (!isCorrectlyInputted) {
+            try {
                 result = sc.nextInt();
                 isCorrectlyInputted = true;
-            } catch (InputMismatchException ex){
+            } catch (InputMismatchException ex) {
                 System.out.println("Вы как-то не так вводите, прекратите и введите нормально!");
                 sc.nextLine();
             }

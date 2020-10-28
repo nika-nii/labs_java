@@ -13,26 +13,26 @@ public enum ProductType {
     String label;
     Class<? extends Product> productClass;
 
-    ProductType(int i, Class<? extends  Product> productClass, String label){
+    ProductType(int i, Class<? extends Product> productClass, String label) {
         type = i;
         this.productClass = productClass;
         this.label = label;
     }
 
-    public Integer getType(){
+    public Integer getType() {
         return this.type;
     }
 
-    public String getLabel(){
+    public String getLabel() {
         return this.label;
     }
 
-    public Class <? extends Product> getProductClass() {
+    public Class<? extends Product> getProductClass() {
         return this.productClass;
     }
 
-    public static ProductType val(Integer type){
-        for (ProductType p: values()) {
+    public static ProductType val(Integer type) {
+        for (ProductType p : values()) {
             if (p.getType().equals(type)) {
                 return p;
             }
@@ -40,16 +40,16 @@ public enum ProductType {
         throw new IllegalArgumentException("Было введено неверное значение!");
     }
 
-    public static String getInputMessage(){
+    public static String getInputMessage() {
         String message = "";
-        for (ProductType t: ProductType.values()){
+        for (ProductType t : ProductType.values()) {
             message += String.format("%d: %s ", t.type, t.label);
         }
         return message;
     }
 
-    public static ProductType valueof(Integer val){
-        for (ProductType p : ProductType.values()){
+    public static ProductType valueof(Integer val) {
+        for (ProductType p : ProductType.values()) {
             if (p.getType().equals(val)) return p;
         }
         return null;

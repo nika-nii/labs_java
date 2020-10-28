@@ -8,13 +8,13 @@ import java.util.Scanner;
 
 public class ProductUtilities {
 
-    static public void printCheapest(ArrayList<Product> products){
-        if (products.size() == 0){
+    static public void printCheapest(ArrayList<Product> products) {
+        if (products.size() == 0) {
             throw new IllegalStateException("У вас массив пустой, так нельзя!");
         }
         Product cheapestProduct = products.get(0);
-        for (Product p : products){
-            if (p.compareTo(cheapestProduct) == -1){
+        for (Product p : products) {
+            if (p.compareTo(cheapestProduct) == -1) {
                 cheapestProduct = p;
             }
         }
@@ -22,15 +22,13 @@ public class ProductUtilities {
     }
 
 
-
-    static public Product inputProduct(Scanner sc){
-        String inputTypes = RubiksCube.getOutputName();
+    static public Product inputProduct(Scanner sc) {
         System.out.println(String.format("Введите тип товара:\n%s", ProductType.getInputMessage()));
         int type = Inputters.getInteger(sc);
         Product p = null;
         ProductType pt = ProductType.valueof(type);
         boolean isCorrectlyInputted = false;
-        while (!isCorrectlyInputted){
+        while (!isCorrectlyInputted) {
             try {
                 p = pt.getProductClass().newInstance();
                 p.init(sc);

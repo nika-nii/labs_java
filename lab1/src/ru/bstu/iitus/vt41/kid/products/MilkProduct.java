@@ -8,14 +8,16 @@ public abstract class MilkProduct extends Product {
         return weight;
     }
 
-    public void setWeight(Integer newWeight){
+    public void setWeight(Integer newWeight) {
         weight = newWeight;
     }
 
-    public boolean canBuy(int money){
-        if (money > getCost() * getWeight()){
+    public boolean canBuy(int money) {
+        if (money > getCost() * getWeight()) {
             return true;
         }
         return false;
-    };
+    }
+
+    ;
 }

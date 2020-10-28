@@ -5,7 +5,7 @@ import ru.bstu.iitus.vt41.kid.utils.Inputters;
 import java.util.Scanner;
 
 public class Cheese extends MilkProduct {
-    public void init(Scanner sc){
+    public void init(Scanner sc) {
         System.out.println("Введите наименование");
         setName(Inputters.getString(sc));
         System.out.println("Введите стоимость");
@@ -14,7 +14,7 @@ public class Cheese extends MilkProduct {
         setWeight(Inputters.getInteger(sc));
     }
 
-    public String toString(){
+    public String toString() {
         return "Сыр " + getName() + "\nСтоимость: " + getCost() + ", вес: " + getWeight();
     }
 }
