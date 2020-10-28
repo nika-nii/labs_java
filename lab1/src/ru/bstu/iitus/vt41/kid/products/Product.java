@@ -22,7 +22,7 @@ public abstract class Product implements Comparable<Product> {
         return cost;
     }
 
-    public abstract void init(Scanner scanner); // считывание параметров с консоли
+    public abstract void init(Scanner sc); // считывание параметров с консоли
 
     public abstract boolean canBuy(int money);  // определяет, можно ли купить товар за имеющуюся сумму
 

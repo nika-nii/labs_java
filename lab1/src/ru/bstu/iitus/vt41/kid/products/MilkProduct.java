@@ -13,11 +13,6 @@ public abstract class MilkProduct extends Product {
     }
 
     public boolean canBuy(int money) {
-        if (money > getCost() * getWeight()) {
-            return true;
-        }
-        return false;
+        return money > getCost() * getWeight();
     }
-
-    ;
 }

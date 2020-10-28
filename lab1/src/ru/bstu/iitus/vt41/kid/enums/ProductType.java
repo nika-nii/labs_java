@@ -9,9 +9,9 @@ public enum ProductType {
     RUBIKSCUBE(3, RubiksCube.class, "Кубик Рубика"),
     TV(4, Tv.class, "Телевизор");
 
-    Integer type;
-    String label;
-    Class<? extends Product> productClass;
+    private Integer type;
+    private String label;
+    private Class<? extends Product> productClass;
 
     ProductType(int i, Class<? extends Product> productClass, String label) {
         type = i;

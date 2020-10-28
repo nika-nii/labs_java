@@ -2,9 +2,6 @@ package ru.bstu.iitus.vt41.kid.products;
 
 public abstract class Toy extends Product {
     public boolean canBuy(int money){
-        if (money > getCost()){
-            return true;
-        }
-        return false;
+        return money > getCost();
     };
 }
