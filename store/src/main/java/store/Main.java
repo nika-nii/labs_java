@@ -1,7 +1,7 @@
-package ru.bstu.iitus.vt41.kid;
+package store;
 
-import ru.bstu.iitus.vt41.kid.products.*;
-import ru.bstu.iitus.vt41.kid.utils.*;
+import store.products.*;
+import store.utils.*;
 
 import java.util.*;
 

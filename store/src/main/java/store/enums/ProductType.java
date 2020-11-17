@@ -1,6 +1,6 @@
-package ru.bstu.iitus.vt41.kid.enums;
+package store.enums;
 
-import ru.bstu.iitus.vt41.kid.products.*;
+import store.products.*;
 
 public enum ProductType {
 

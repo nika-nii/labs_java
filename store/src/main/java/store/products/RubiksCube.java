@@ -1,10 +1,10 @@
-package ru.bstu.iitus.vt41.kid.products;
-
-import ru.bstu.iitus.vt41.kid.utils.Inputters;
+package store.products;
 
 import java.util.Scanner;
 
-public class Camera extends Tech {
+import store.utils.Inputters;
+
+public class RubiksCube extends Toy {
     public void init(Scanner sc) {
         System.out.println("Введите наименование");
         setName(Inputters.getString(sc));
@@ -13,6 +13,6 @@ public class Camera extends Tech {
     }
 
     public String toString() {
-        return "Камера " + getName() + "\nСтоимость: " + getCost();
+        return "Кубик Рубика " + this.getName() + "\nСтоимость: " + getCost();
     }
 }

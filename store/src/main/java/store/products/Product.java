@@ -1,4 +1,4 @@
-package ru.bstu.iitus.vt41.kid.products;
+package store.products;
 
 import java.util.Scanner;
 

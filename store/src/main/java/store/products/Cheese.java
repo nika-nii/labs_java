@@ -1,6 +1,6 @@
-package ru.bstu.iitus.vt41.kid.products;
+package store.products;
 
-import ru.bstu.iitus.vt41.kid.utils.Inputters;
+import store.utils.Inputters;
 
 import java.util.Scanner;
 

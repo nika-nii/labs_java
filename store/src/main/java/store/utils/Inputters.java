@@ -1,4 +1,4 @@
-package ru.bstu.iitus.vt41.kid.utils;
+package store.utils;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;

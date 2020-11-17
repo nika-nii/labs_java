@@ -1,11 +1,13 @@
-package ru.bstu.iitus.vt41.kid.utils;
+package store.utils;
 
-import ru.bstu.iitus.vt41.kid.products.*;
-import ru.bstu.iitus.vt41.kid.enums.ProductType;
+import lombok.experimental.UtilityClass;
+import store.products.*;
+import store.enums.ProductType;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
+@UtilityClass
 public class ProductUtilities {
 
     static public void printCheapest(ArrayList<Product> products) {

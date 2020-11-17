@@ -1,9 +1,10 @@
-package ru.bstu.iitus.vt41.kid.products;
+package store.products;
 
-import ru.bstu.iitus.vt41.kid.utils.Inputters;
+import lombok.ToString;
+import store.utils.Inputters;
 
 import java.util.Scanner;
-
+@ToString
 public class Tv extends Tech{
     public void init(Scanner sc){
         System.out.println("Введите наименование");
@@ -12,7 +13,7 @@ public class Tv extends Tech{
         setCost(Inputters.getInteger(sc));
     }
 
-    public String toString(){
+    /*public String toString(){
         return "Телевизор " + getName() + getName() + "\nСтоимость: " + getCost();
-    }
+    }*/
 }
