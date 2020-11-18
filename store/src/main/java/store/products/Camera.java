@@ -5,6 +5,7 @@ import store.utils.Inputters;
 
 import java.util.Scanner;
 
+@ToString(callSuper = true, includeFieldNames=true)
 public class Camera extends Tech {
     public void init(Scanner sc) {
         System.out.println("Введите наименование");
@@ -13,7 +14,4 @@ public class Camera extends Tech {
         setCost(Inputters.getInteger(sc));
     }
 
-    public String toString() {
-        return "Камера " + getName() + "\nСтоимость: " + getCost();
-    }
 }

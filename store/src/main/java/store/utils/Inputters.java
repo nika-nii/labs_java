@@ -1,8 +1,11 @@
 package store.utils;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
+@UtilityClass
 public class Inputters {
     public static String getString(Scanner sc) {
         String result = "";

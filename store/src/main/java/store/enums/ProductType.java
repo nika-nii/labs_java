@@ -1,7 +1,10 @@
 package store.enums;
 
+import lombok.Getter;
+import lombok.Setter;
 import store.products.*;
 
+@Getter
 public enum ProductType {
 
     CAMERA(1, Camera.class, "Камера"),
@@ -17,18 +20,6 @@ public enum ProductType {
         type = i;
         this.productClass = productClass;
         this.label = label;
-    }
-
-    public Integer getType() {
-        return this.type;
-    }
-
-    public String getLabel() {
-        return this.label;
-    }
-
-    public Class<? extends Product> getProductClass() {
-        return this.productClass;
     }
 
     public static ProductType val(Integer type) {

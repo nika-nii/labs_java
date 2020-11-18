@@ -18,6 +18,12 @@ public class Main {
         }
         System.out.println("Щас найдем самый дешевый товар!");
         ProductUtilities.printCheapest(products);
+        /*Cheese c = new Cheese();
+        c.init(sc);
+        c.setWeight(100);
+        System.out.println(c.toString());
+
+         */
     }
 }
 

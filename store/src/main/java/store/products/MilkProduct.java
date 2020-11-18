@@ -1,16 +1,14 @@
 package store.products;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@ToString(callSuper = true, includeFieldNames=true)
 public abstract class MilkProduct extends Product {
     private Integer weight;
-
-    public Integer getWeight() {
-        return weight;
-    }
-
-    public void setWeight(Integer newWeight) {
-        weight = newWeight;
-    }
 
     public boolean canBuy(int money) {
         return money > getCost() * getWeight();

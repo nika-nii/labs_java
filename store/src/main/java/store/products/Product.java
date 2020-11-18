@@ -1,32 +1,21 @@
 package store.products;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 import java.util.Scanner;
 
+@Getter
+@Setter
+@ToString(includeFieldNames=true)
 public abstract class Product implements Comparable<Product> {
     private String name;
     private Integer cost;
 
-    public void setName(String newName) {
-        this.name = newName;
-    }
-
-    public void setCost(Integer newCost) {
-        this.cost = newCost;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Integer getCost() {
-        return cost;
-    }
-
-    public abstract void init(Scanner sc); // считывание параметров с консоли
+    public abstract void init(Scanner sc);      // считывание параметров с консоли
 
     public abstract boolean canBuy(int money);  // определяет, можно ли купить товар за имеющуюся сумму
-
-    public abstract String toString();          // возвращается состояние объекта в виде строки (определяется только в наследниках, т.к. определен в // Object)
 
     public int compareTo(Product p) {
         Integer cost1 = this.getCost();

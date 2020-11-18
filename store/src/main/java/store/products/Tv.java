@@ -4,7 +4,8 @@ import lombok.ToString;
 import store.utils.Inputters;
 
 import java.util.Scanner;
-@ToString
+
+@ToString(callSuper = true, includeFieldNames=true)
 public class Tv extends Tech{
     public void init(Scanner sc){
         System.out.println("Введите наименование");
@@ -12,8 +13,4 @@ public class Tv extends Tech{
         System.out.println("Введите стоимость");
         setCost(Inputters.getInteger(sc));
     }
-
-    /*public String toString(){
-        return "Телевизор " + getName() + getName() + "\nСтоимость: " + getCost();
-    }*/
 }
