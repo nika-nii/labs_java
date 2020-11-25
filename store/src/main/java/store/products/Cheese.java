@@ -5,7 +5,7 @@ import store.utils.Inputters;
 
 import java.util.Scanner;
 
-@ToString(callSuper = true, includeFieldNames=true)
+@ToString(callSuper = true, includeFieldNames = true)
 public class Cheese extends MilkProduct {
     public void init(Scanner sc) {
         System.out.println("Введите наименование");

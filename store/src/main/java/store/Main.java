@@ -1,9 +1,12 @@
 package store;
 
-import store.products.*;
-import store.utils.*;
+import store.products.Product;
+import store.utils.InputException;
+import store.utils.Inputters;
+import store.utils.ProductUtilities;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class Main {
@@ -12,18 +15,20 @@ public class Main {
         ArrayList<Product> products = new ArrayList<>();
 
         System.out.println("Введите количество товаров:");
-        int n = sc.nextInt();
+        int n = Inputters.getInteger(sc);
         for (int i = 0; i < n; i++) {
-            products.add(ProductUtilities.inputProduct(sc));
+            Product p = null;
+            try {
+                p = ProductUtilities.inputProduct(sc);
+            } catch (InputException ex) {
+                System.out.println(ex + " Повторите ввод.");
+
+            } finally {
+                products.add(p);
+            }
         }
         System.out.println("Щас найдем самый дешевый товар!");
         ProductUtilities.printCheapest(products);
-        /*Cheese c = new Cheese();
-        c.init(sc);
-        c.setWeight(100);
-        System.out.println(c.toString());
-
-         */
     }
 }
 

@@ -1,8 +1,8 @@
 package store.utils;
 
 import lombok.experimental.UtilityClass;
-import store.products.*;
 import store.enums.ProductType;
+import store.products.Product;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -24,21 +24,26 @@ public class ProductUtilities {
     }
 
 
-    static public Product inputProduct(Scanner sc) {
+    static public Product inputProduct(Scanner sc) throws InputException {
         System.out.println(String.format("Введите тип товара:\n%s", ProductType.getInputMessage()));
-        int type = Inputters.getInteger(sc);
+
         Product p = null;
-        ProductType pt = ProductType.valueof(type);
-        boolean isCorrectlyInputted = false;
-        while (!isCorrectlyInputted) {
+        ProductType pt = null;
+        while (pt == null) {
             try {
-                p = pt.getProductClass().newInstance();
-                p.init(sc);
-                isCorrectlyInputted = true;
-            } catch (IllegalAccessException | InstantiationException e) {
-                isCorrectlyInputted = false;
+                pt = ProductType.val(Inputters.getInteger(sc));
+            } catch (InputException ex) {
+                System.out.println(ex + " Повторите ввод.");
             }
         }
+
+        try {
+            p = pt.getProductClass().newInstance();
+            p.init(sc);
+        } catch (IllegalAccessException | InstantiationException e) {
+            throw new InputException("Произошла ошибка при инициализации продукта");
+        }
+
         return p;
     }
 }

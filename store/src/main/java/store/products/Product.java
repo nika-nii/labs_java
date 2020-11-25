@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 @Getter
 @Setter
-@ToString(includeFieldNames=true)
+@ToString(includeFieldNames = true)
 public abstract class Product implements Comparable<Product> {
     private String name;
     private Integer cost;

@@ -1,11 +1,11 @@
 package store.products;
 
-import java.util.Scanner;
-
 import lombok.ToString;
 import store.utils.Inputters;
 
-@ToString(callSuper = true, includeFieldNames=true)
+import java.util.Scanner;
+
+@ToString(callSuper = true, includeFieldNames = true)
 public class RubiksCube extends Toy {
     public void init(Scanner sc) {
         System.out.println("Введите наименование");

@@ -3,6 +3,7 @@ package store.enums;
 import lombok.Getter;
 import lombok.Setter;
 import store.products.*;
+import store.utils.InputException;
 
 @Getter
 public enum ProductType {
@@ -22,13 +23,13 @@ public enum ProductType {
         this.label = label;
     }
 
-    public static ProductType val(Integer type) {
+    public static ProductType val(Integer type) throws InputException {
         for (ProductType p : values()) {
             if (p.getType().equals(type)) {
                 return p;
             }
         }
-        throw new IllegalArgumentException("Было введено неверное значение!");
+        throw new InputException("Такого продукта не существует!");
     }
 
     public static String getInputMessage() {
@@ -37,12 +38,5 @@ public enum ProductType {
             message += String.format("%d: %s ", t.type, t.label);
         }
         return message;
-    }
-
-    public static ProductType valueof(Integer val) {
-        for (ProductType p : ProductType.values()) {
-            if (p.getType().equals(val)) return p;
-        }
-        return null;
     }
 }

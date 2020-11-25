@@ -2,19 +2,17 @@ package store.utils;
 
 import lombok.experimental.UtilityClass;
 
-import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.util.Scanner;
 
 @UtilityClass
 public class Inputters {
     public static String getString(Scanner sc) {
         String result = "";
-        boolean isCorrectlyInputted = false;
-        while (!isCorrectlyInputted) {
+        while (result == "") {
             try {
                 sc.nextLine();
                 result = sc.nextLine();
-                isCorrectlyInputted = true;
             } catch (InputMismatchException ex) {
                 System.out.println("Вы как-то не так вводите, прекратите и введите нормально!");
                 sc.nextLine();
@@ -24,12 +22,10 @@ public class Inputters {
     }
 
     public static Integer getInteger(Scanner sc) {
-        Integer result = 0;
-        boolean isCorrectlyInputted = false;
-        while (!isCorrectlyInputted) {
+        int result = -1;
+        while (result == -1) {
             try {
                 result = sc.nextInt();
-                isCorrectlyInputted = true;
             } catch (InputMismatchException ex) {
                 System.out.println("Вы как-то не так вводите, прекратите и введите нормально!");
                 sc.nextLine();
