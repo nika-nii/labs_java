@@ -9,7 +9,12 @@ import java.util.Scanner;
 public class Camera extends Tech {
     public void init(Scanner sc) {
         System.out.println("Введите наименование");
-        setName(Inputters.getString(sc));
+        String newName = Inputters.getString(sc);
+        while(!newName.matches("^(Камера )(?:[a-zA-Zа-яА-Я0-9]+)*$")){
+            System.out.println("Немедленно прекратите и введите нормально! Название сыра должно начинаться с 'Камера ...'");
+            newName = Inputters.getString(sc);
+        }
+        setName(newName);
         System.out.println("Введите стоимость");
         setCost(Inputters.getInteger(sc));
     }

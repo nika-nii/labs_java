@@ -11,11 +11,9 @@ public class Inputters {
         String result = "";
         while (result == "") {
             try {
-                sc.nextLine();
                 result = sc.nextLine();
             } catch (InputMismatchException ex) {
                 System.out.println("Вы как-то не так вводите, прекратите и введите нормально!");
-                sc.nextLine();
             }
         }
         return result;

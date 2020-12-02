@@ -9,7 +9,12 @@ import java.util.Scanner;
 public class Cheese extends MilkProduct {
     public void init(Scanner sc) {
         System.out.println("Введите наименование");
-        setName(Inputters.getString(sc));
+        String newName = Inputters.getString(sc);
+        while(!newName.matches("^(Сыр )(?:[a-zA-Zа-яА-Я0-9]+)*$")){
+            System.out.println("Немедленно прекратите и введите нормально! Название сыра должно начинаться с 'Сыр ...'");
+            newName = Inputters.getString(sc);
+        }
+        setName(newName);
         System.out.println("Введите стоимость");
         setCost(Inputters.getInteger(sc));
         System.out.println("Введите вес продукта");
