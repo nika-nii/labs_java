@@ -11,7 +11,7 @@ public class Camera extends Tech {
         System.out.println("Введите наименование");
         String newName = Inputters.getString(sc);
         while(!newName.matches("^(Камера )(?:[a-zA-Zа-яА-Я0-9]+)*$")){
-            System.out.println("Немедленно прекратите и введите нормально! Название сыра должно начинаться с 'Камера ...'");
+            System.out.println("Немедленно прекратите и введите нормально! Название продукта должно начинаться с 'Камера ...'");
             newName = Inputters.getString(sc);
         }
         setName(newName);
