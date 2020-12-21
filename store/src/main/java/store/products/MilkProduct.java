@@ -6,7 +6,7 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@ToString(callSuper = true, includeFieldNames=true)
+@ToString(callSuper = true, includeFieldNames = true)
 public abstract class MilkProduct extends Product {
     private Integer weight;
 

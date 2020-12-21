@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Tv extends Tech {
     public void init(Scanner sc) {
         String newName = Inputters.getString(sc);
-        while(!newName.matches("^(Телевизор )(?:[a-zA-Zа-яА-Я0-9]+)*$")){
+        while (!newName.matches("^(Телевизор )(?:[a-zA-Zа-яА-Я0-9]+)*$")) {
             System.out.println("Немедленно прекратите и введите нормально! Название продукта должно начинаться с 'Телевизор ...'");
             newName = Inputters.getString(sc);
         }
