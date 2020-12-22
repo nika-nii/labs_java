@@ -1,4 +1,4 @@
-package ru.bstu.iitus.vt41.kid.cw.models;
+package ru.bstu.iitus.vt41.fnr.course.models;
 
 import lombok.*;
 
@@ -10,14 +10,13 @@ import javax.persistence.*;
 @ToString
 @Entity
 @AllArgsConstructor
-public final class Genre {
+public class Tag {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "genre_id")
+    @Column(name = "tag_id")
     private Long id;
-    private String name;
+    private String title;
 
-    public Genre() {
-
+    public Tag() {
     }
 }

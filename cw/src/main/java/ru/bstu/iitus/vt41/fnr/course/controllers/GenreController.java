@@ -1,8 +1,8 @@
-package ru.bstu.iitus.vt41.kid.cw.controllers;
+package ru.bstu.iitus.vt41.fnr.course.controllers;
 
 import org.springframework.web.bind.annotation.*;
-import ru.bstu.iitus.vt41.kid.cw.models.Genre;
-import ru.bstu.iitus.vt41.kid.cw.repositories.GenreRepository;
+import ru.bstu.iitus.vt41.fnr.course.repositories.GenreRepository;
+import ru.bstu.iitus.vt41.fnr.course.models.Genre;
 
 import java.util.List;
 import java.util.Optional;

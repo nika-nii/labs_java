@@ -1,4 +1,4 @@
-package ru.bstu.iitus.vt41.kid.cw.models;
+package ru.bstu.iitus.vt41.fnr.course.models;
 
 import lombok.*;
 

@@ -1,4 +1,4 @@
-package ru.bstu.iitus.vt41.kid.cw;
+package ru.bstu.iitus.vt41.fnr.course;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

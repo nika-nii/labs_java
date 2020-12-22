@@ -1,8 +1,8 @@
-package ru.bstu.iitus.vt41.kid.cw.controllers;
+package ru.bstu.iitus.vt41.fnr.course.controllers;
 
 import org.springframework.web.bind.annotation.*;
-import ru.bstu.iitus.vt41.kid.cw.models.Band;
-import ru.bstu.iitus.vt41.kid.cw.repositories.BandRepository;
+import ru.bstu.iitus.vt41.fnr.course.repositories.BandRepository;
+import ru.bstu.iitus.vt41.fnr.course.models.Band;
 
 import java.util.List;
 import java.util.Optional;
