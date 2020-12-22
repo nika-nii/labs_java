@@ -22,8 +22,7 @@ public final class Band {
     private LocalDate ended;
     private String logo;
     private Integer rating;
-    //@OneToMany(mappedBy = "band", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    //private List<Album> albums;
+
 
     public Band() {
 

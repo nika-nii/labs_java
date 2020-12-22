@@ -17,8 +17,11 @@ public class AlbumController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/albums")
-    List<Album> all() {
-        return repository.findAll();
+    List<Album> all(@RequestParam(required = false) String title) {
+        if (title == null) {
+            return repository.findAll();
+        }
+        return  repository.findAlbumByTitle(title);
     }
 
     @CrossOrigin(origins = "*")
